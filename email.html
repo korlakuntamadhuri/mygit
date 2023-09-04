@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="email.css">
+    <script>
+      function validate(form) {
+        var Email=form.email.value;
+        var password=form.password.value;
+        if (Email.length===0) {
+          alert("you must have enter valid email")
+          return false;
+          
+        }
+        if (password.length===0) {
+          alert("you must have enter valid password")
+          return false;
+        }
+        return true; 
+      }
+    </script>
+</head>
+<body>
+    <div class="div">
+        <div class="header">
+          <strong>Login Form</strong>
+        </div>
+        <div class="body">
+         <form action="" class="form" onsubmit="validate(this)">
+            <input  name="email" type="email" placeholder="Email address" class="input1" pattern="/^[^\s@]+@[^\s@]+\.[^\s@]+$/" title="enter valid email">
+            <input  name="password" type="password" placeholder="password" class="input1">
+            <div class="options">
+              <input type="checkbox">Remember
+              <a href="" class="forgot">Forgot password</a>
+            </div>
+            <button type="submit">Login</button>
+         </form>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
